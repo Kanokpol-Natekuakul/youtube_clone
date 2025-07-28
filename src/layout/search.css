@@ -1,0 +1,65 @@
+.the-cards-search{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 0 24px;
+    margin-top: 48px;
+    max-width: 1144px;
+}
+
+
+/* Styles for a grid layout within a card's channel section */
+.the-cards-search .card .-channel {
+  grid-template-columns: 360px auto; /* Defines two columns: first 360px wide, second takes remaining space */
+  gap: 16px; /* Sets a gap of 16px between grid items */
+}
+
+/* Styles for the 'about' section of a card */
+.the-cards-search .card .-about {
+  display: block; /* Ensures the element behaves as a block-level element */
+  position: relative; /* Establishes a positioning context for absolutely positioned children */
+}
+
+.the-cards-search .card .-title{
+    -webkit-line-clamp: 1;
+     width: calc(100% - 40px);
+}
+
+/* Common styles for caption, view, and channel-name elements within a card */
+.the-cards-search .card .-caption,
+.the-cards-search .card .-view,
+.the-cards-search .card .-channel-name {
+  font-weight: 400; /* Normal font weight */
+  font-size: 12px; /* Font size of 12 pixels */
+  color: #606060; /* Gray text color */
+  list-style: 18px; /* This property should likely be 'line-height' instead of 'list-style' for text. 'list-style' is for list item markers. Assuming it's a typo and meant 'line-height'. */
+}
+
+/* Styles for an 'option' element within a card */
+.the-cards-search .card .-option {
+  position: absolute; /* Positions the element relative to its nearest positioned ancestor (which is '-about' due to 'position: relative') */
+  top: 0; /* Aligns the top edge with the top of the parent */
+  right: 0; /* Aligns the right edge with the right of the parent */
+  display: none; /* Hides the element by default */
+}
+
+/* Styles for the 'option' element when its parent 'about' is hovered */
+.the-cards-search .card .-about:hover .-option {
+  display: block; /* Makes the 'option' element visible when the '-about' section is hovered */
+}
+
+/* Styles specifically for the 'channel' element within a card */
+.the-cards-search .card .-channel {
+  display: grid; /* Enables CSS Grid layout for its children */
+  grid-template-columns: 24px auto; /* Defines two columns: first 24px wide, second takes remaining space (likely for channel image and name) */
+    align-items: center;
+    gap: 8px;
+    padding: 12px 0;
+}
+.the-cards-search .card .-channel-img{
+    width: 24px;
+    height: 24px;
+}
+.the-cards-search .card .-thumb{
+    margin: 0;
+}

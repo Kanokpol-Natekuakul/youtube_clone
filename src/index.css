@@ -6,8 +6,11 @@ body{
   font-family: "Roboto",sans-serif;
   margin: 0;
 }
+*{
+  box-sizing: border-box;
+}
 #main-layout{
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   display: grid;
   grid-template:
@@ -16,12 +19,14 @@ body{
 }
 #nav {
   grid-area: n;
+  overflow: auto;
 }
 #side {
   grid-area: s;
 } 
 #content {
   grid-area: c;
+  overflow: auto;
 }
 a{
   text-decoration: none;

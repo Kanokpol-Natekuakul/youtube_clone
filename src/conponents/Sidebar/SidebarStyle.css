@@ -5,10 +5,11 @@
 }
 
 
-.side-pmr{
+.side-pmr , .side-sec{
     display: grid;
     grid-auto-rows:40px ;
     align-items: center;
+    border-bottom: 1px solid #e5e5e5;
     
     .-item{
         display: grid;
@@ -19,11 +20,28 @@
         padding: 0 12px;
         border-radius: 10px;
     }
-    .-item:hover{
+    .-item:hover , .item:hover{
         background-color: #f2f2f2;
     }
-    .text{
+    .text {
         font-size: 1.4rem;
         line-height: 10px;
     }
+}
+.side-sec{
+    .item{
+        display: grid;
+        grid-template-columns: 48px auto 16px;
+        align-items: center;
+        height: 100%;
+        background-color: #fff;
+        padding: 0 12px;
+        border-radius: 10px;
+
+        icon img{
+            width:24px;
+            border-radius: 10em;
+        }
+    }
+    
 }
